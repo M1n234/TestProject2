@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TestProject</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TestProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+	<ul>
+		<li>Home</li>
+		<li>About</li>
+		<li>Contact</li>
+	</ul>
+</nav>
+<%= yield %>
+<footer>
+	&copy; 205 Bike Berlin
+</footer>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+</body>
 </html>
